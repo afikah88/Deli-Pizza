@@ -1,0 +1,220 @@
+/* Global styles */
+:root {
+    --primary-color: #e31837;
+    --secondary-color: #28a745;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #eee;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Navigation styles */
+.main-nav {
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Profile Content */
+.profile-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.profile-section h1 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.info-item span {
+    color: var(--text-color);
+}
+
+/* Order History Table */
+.history-table {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--shadow-color);
+    background: white;
+}
+
+.history-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed;
+}
+
+.history-table thead tr {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.history-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.history-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+/* Column widths */
+.history-table th:nth-child(1) { width: 10%; }
+.history-table th:nth-child(2) { width: 15%; }
+.history-table th:nth-child(3) { width: 35%; }
+.history-table th:nth-child(4) { width: 15%; }
+.history-table th:nth-child(5) { width: 15%; }
+.history-table th:nth-child(6) { width: 10%; }
+
+/* Items list styling */
+.items-list {
+    max-width: 100%;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Points styling */
+.points-earned {
+    color: var(--secondary-color);
+    font-weight: 600;
+    display: inline-block;
+    padding: 4px 8px;
+    background: #e3fff0;
+    border-radius: 4px;
+}
+
+/* Table hover effects */
+.history-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.history-table tbody tr:hover {
+    background-color: var(--background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .history-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .history-table table {
+        min-width: 800px;
+    }
+    
+    .profile-section {
+        padding: 1rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,135 @@
+/* Container styling */
+.menu-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Item details layout */
+.item-details {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Image styling */
+.item-image {
+    flex: 0 0 40%;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Content area */
+.item-content {
+    flex: 1;
+}
+
+/* Menu description */
+.menu-description h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.menu-description p {
+    margin: 0 0 20px 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Variation sections */
+.variation-section,
+.crust-section,
+.quantity-section {
+    margin-bottom: 20px;
+}
+
+.variation-section h3,
+.crust-section h3,
+.quantity-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Radio options */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.radio-option .price {
+    color: #666;
+    margin-left: auto;
+}
+
+/* Quantity controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#quantity {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/* Total price and button */
+.add-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.add-cart-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .item-details {
+        flex-direction: column;
+    }
+    
+    .item-image {
+        flex: 0 0 100%;
+    }
+    
+    .menu-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}

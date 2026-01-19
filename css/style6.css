@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.freepik.com/free-photo/black-concrete-wall_24972-1046.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to improve contrast */
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+#section-wrapper {
+    background: rgba(128, 0, 0, 0.9); /* Maroon with slight transparency */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
+}
+
+.info-wrap, .form-wrap {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.info-title, .form-title {
+    color: #fff;
+    text-align: center;
+}
+
+.info-sub-title {
+    text-align: center;
+}
+
+.info-details li, .social-icons li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.info-details li a {
+    color: white;
+    text-decoration: none;
+}
+
+.info-details li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+input:focus, textarea:focus, input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
+    background: #fff;
+    color: #000;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+.submit-button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background: #e6b800;
+}
