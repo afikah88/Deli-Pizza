@@ -12,13 +12,14 @@
 - Click Create.
 
 3. Import SQL file / Manually Create the Table
-3.1 Import the Database
+
+   3.1 Import the Database
 - Click on the delipizza database.
 - Select the Import tab.
 - Click Choose File and select your .sql file; (cart, feedback, order_items, orders, users)
 - Click 'Go' to execute.
 
-3.2 Create the Tables
+  3.2 Create the Tables
 - Open sql files in the project folder.
 - Copy and paste the sql query one by one from the sql files.
 
